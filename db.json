@@ -1,0 +1,35 @@
+{
+    "users":
+    [
+    {
+        "id": "123-123-123",
+        "firstName": "Yannick",
+        "lastName": "Willems",
+        "gender": "male",
+        "username": "ker0h",
+        "email": "ywillems96@gmail.com",
+        "birthDate": "",
+        "password": "qwerty123"
+    },
+    {
+        "id": "123-123-167",
+        "firstName": "John",
+        "lastName": "Smith",
+        "gender": "male",
+        "username": "jsmith",
+        "email": "jsmith87@gmail.com",
+        "birthDate": "",
+        "password": "qwerty123"
+    },
+    {
+        "id": "123-123-125",
+        "firstName": "Lara",
+        "lastName": "Angul",
+        "gender": "female",
+        "username": "angulara",
+        "email": "angulara@gmail.com",
+        "birthDate": "",
+        "password": "qwerty123"
+    }
+]
+}

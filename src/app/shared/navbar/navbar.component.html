@@ -1,0 +1,118 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
+  <!-- Container wrapper -->
+  <div class="container-fluid">
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="#">音字道</a>
+
+    <!-- Toggle button -->
+    <button
+      class="navbar-toggler"
+      type="button"
+      (click)="basicNavbar.toggle()"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Collapsible wrapper -->
+    <div
+      class="collapse navbar-collapse"
+      id="navbarSupportedContent"
+      mdbCollapse
+      #basicNavbar="mdbCollapse"
+    >
+      <!-- Left links -->
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            routerLink="/songs"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Songs</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/artists"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Artists</a
+          >
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            routerLink="/users"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Users</a
+          >
+        </li>
+      </ul>
+      <!-- Left links -->
+
+      <!-- Search form -->
+      <div class="d-flex w-auto search">
+        <ul class="navbar-nav">
+          <!-- Icon dropdown -->
+          <li mdbDropdown class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              id="navbarDropdown"
+              role="button"
+              mdbDropdownToggle
+              aria-expanded="false"
+            >
+              <i class="flag-united-kingdom flag m-0"></i>
+            </a>
+            <ul
+              mdbDropdownMenu
+              class="dropdown-menu"
+              aria-labelledby="navbarDropdown"
+            >
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="flag-united-kingdom flag"></i>English
+                  <i class="fa fa-check text-success ms-2"></i
+                ></a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="flag-japan flag"></i>日本語</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="flag-taiwan flag"></i>中文 (繁體)</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  ><i class="flag-china flag"></i>中文 (简体)</a
+                >
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              routerLink="/about"
+              routerLinkActive="active"
+              ariaCurrentWhenActive="page"
+              >About</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Collapsible wrapper -->
+  </div>
+  <!-- Container wrapper -->
+</nav>
+<!-- Navbar -->

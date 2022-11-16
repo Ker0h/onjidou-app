@@ -1,0 +1,42 @@
+<article>
+  <div class="row">
+    <div class="user-profile col-lg-12">
+      <h2>{{ user.username }}</h2>
+      <hr />
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-6 col-md-12">
+      <div class="row">
+        <div class="col-lg-3 col-xs-12">
+          <img src="http://ywillems.nl/img/face.4f0457e4.png" width="100%" />
+        </div>
+        <div class="col-lg-8 col-xs-12">
+          <p>Name: {{ user.firstName }} {{ user.lastName }}</p>
+          <p>E-Mail: {{ user.email }}</p>
+          <p>Birthdate: {{ user.birthDate }}</p>
+          <hr />
+          <button
+            type="button"
+            class="btn btn-primary"
+            [routerLink]="['/users', user.id, 'edit']"
+          >
+            Edit Profile
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Song List component or Edit Component-->
+    <div class="user-songs col-lg-6 col-md-12">
+      <ul>
+        <li><a [routerLink]="['/songs/1']"></a>Song</li>
+        <li><a [routerLink]="['/songs/1']"></a>Song</li>
+        <li><a [routerLink]="['/songs/1']"></a>Song</li>
+        <li><a [routerLink]="['/songs/1']"></a>Song</li>
+        <li><a [routerLink]="['/songs/1']"></a>Song</li>
+      </ul>
+    </div>
+  </div>
+</article>

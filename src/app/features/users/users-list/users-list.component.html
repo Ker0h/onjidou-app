@@ -1,0 +1,26 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Username</th>
+      <th scope="col">Name</th>
+      <th scope="col">E-Mail</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of users; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>
+        <a [routerLink]="['/users', user.id]">{{ user.username }}</a>
+      </td>
+      <td>{{ user.firstName }} {{ user.lastName }}</td>
+      <td>{{ user.email }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div>
+  <button type="button" class="btn btn-primary" [routerLink]="['/users/new']">
+    Add User
+  </button>
+</div>

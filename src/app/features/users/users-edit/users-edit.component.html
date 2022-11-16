@@ -1,0 +1,40 @@
+<form #form="ngForm">
+  <div class="input-group mb-3">
+    <input
+      [(ngModel)]="user.firstName"
+      name="firstName"
+      type="text"
+      placeholder="First name..."
+      aria-label="First name"
+      class="form-control"
+    />
+    <input
+      [(ngModel)]="user.lastName"
+      name="lastName"
+      type="text"
+      placeholder="Last name..."
+      aria-label="Last name"
+      class="form-control"
+    />
+  </div>
+  <div class="input-group mb-3">
+    <input
+      [(ngModel)]="user.username"
+      name="username"
+      type="text"
+      class="form-control"
+      placeholder="Username..."
+      aria-label="Username"
+    />
+  </div>
+  <div class="input-group mb-3">
+    <input
+      [(ngModel)]="user.email"
+      name="email"
+      type="email"
+      class="form-control"
+      placeholder="E-Mail..."
+      aria-label="E-Mail"
+    />
+  </div>
+</form>
