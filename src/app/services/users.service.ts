@@ -29,6 +29,23 @@ getUserByUsername(username: string): Observable<User> {
 
 // POST User
 addUser(newUser: User): Observable<User> {
-  return this.http.post<User>(USER_API, newUser)
+  const headers = { 'content-type': 'application/json'}  
+  const body = JSON.stringify(newUser);
+  console.log(body)
+  return this.http.post<User>(USER_API, body, {'headers': headers})
+}
+
+// PUT User
+updateUser(updatedUser: User): Observable<User> {
+  const headers = { 'content-type': 'application/json'}  
+  const body = JSON.stringify(updatedUser);
+  console.log(body)
+  return this.http.put<User>(`${USER_API}/${updatedUser.id}`, 
+  body, {'headers': headers})
+}
+
+// DELETE User
+deleteUser(deletedUser: User): Observable<User> {
+  return this.http.delete<User>(`${USER_API}/${deletedUser.id}`)
 }
 }

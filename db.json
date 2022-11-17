@@ -1,35 +1,41 @@
 {
-    "users":
-    [
+  "users": [
     {
-        "id": "123-123-123",
-        "firstName": "Yannick",
-        "lastName": "Willems",
-        "gender": "male",
-        "username": "ker0h",
-        "email": "ywillems96@gmail.com",
-        "birthDate": "",
-        "password": "qwerty123"
+      "id": "123-123-123",
+      "firstName": "Yannick",
+      "lastName": "Willems",
+      "gender": "male",
+      "username": "ker0h",
+      "email": "ywillems96@gmail.com",
+      "birthDate": "29-09-1996",
+      "password": "qwerty123"
     },
     {
-        "id": "123-123-167",
-        "firstName": "John",
-        "lastName": "Smith",
-        "gender": "male",
-        "username": "jsmith",
-        "email": "jsmith87@gmail.com",
-        "birthDate": "",
-        "password": "qwerty123"
+      "id": "123-123-167",
+      "firstName": "John",
+      "lastName": "Smith",
+      "gender": "male",
+      "username": "jsmith",
+      "email": "jsmith87@gmail.com",
+      "birthDate": "14-05-1978",
+      "password": "qwerty123"
     },
     {
-        "id": "123-123-125",
-        "firstName": "Lara",
-        "lastName": "Angul",
-        "gender": "female",
-        "username": "angulara",
-        "email": "angulara@gmail.com",
-        "birthDate": "",
-        "password": "qwerty123"
+      "id": "123-123-125",
+      "firstName": "Lara",
+      "lastName": "Angul",
+      "gender": "female",
+      "username": "angulara",
+      "email": "angulara@gmail.com",
+      "birthDate": "27-11-1992",
+      "password": "qwerty123"
+    },
+    {
+      "firstName": "Jenk",
+      "lastName": "Kaakje",
+      "username": "kaakje",
+      "email": "kaakje@gmail.com",
+      "id": "zXaK3xV"
     }
-]
+  ]
 }
