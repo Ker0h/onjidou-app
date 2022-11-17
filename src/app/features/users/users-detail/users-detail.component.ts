@@ -21,15 +21,28 @@ export class UsersDetailComponent implements OnInit {
     return this._user;
   }
 
-  ngOnInit() {
-    this.route.paramMap.subscribe(params => {
-      this._id = params.get("id");
-    });
-
+  getUser(id: string | null) {
     this.userService.getUser(this._id)
     .subscribe((data: User) => {
       this._user = data;
     })
+  }
+
+  deleteUser(user: User) {
+    this.userService.deleteUser(user)
+    .subscribe(() => {
+      this.router.navigate(["/users"])
+    })
+  }
+
+  ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      this._id = params.get("id");
+
+      this.getUser(this._id);
+    });
+
+
   }
 
 }

@@ -37,4 +37,30 @@
       aria-label="E-Mail"
     />
   </div>
+  <div class="input-group mb-3">
+    <input
+      [(ngModel)]="user.birthDate"
+      name="birthDate"
+      type="date"
+      class="form-control"
+      aria-label="Birthdate"
+    />
+  </div>
+  <hr />
+  <button
+    *ngIf="user.id"
+    type="submit"
+    class="btn btn-primary"
+    (click)="updateUser(user)"
+  >
+    Update Profile
+  </button>
+  <button
+    *ngIf="!user.id"
+    type="submit"
+    class="btn btn-primary"
+    (click)="addUser(user)"
+  >
+    Create Profile
+  </button>
 </form>
