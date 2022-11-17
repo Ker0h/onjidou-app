@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http'
 import { User } from 'src/app/models/User'
 import { Observable } from 'rxjs';
 
-const USER_API = "http://localhost:3000/Users"
+const USER_API = "https://dynamic-glowing-book.glitch.me/users"
 
 @Injectable({
   providedIn: 'root'
