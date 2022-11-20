@@ -28,6 +28,14 @@
     />
   </div>
   <div class="input-group mb-3">
+    <span>Gender: </span>
+    <select>
+      <option *ngFor="let gender of genders" [value]="gender">
+        {{ gender }}
+      </option>
+    </select>
+  </div>
+  <div class="input-group mb-3">
     <input
       [(ngModel)]="user.email"
       name="email"

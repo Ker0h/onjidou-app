@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { User } from 'src/app/models/User';
+import { User, Gender } from 'src/app/models/User';
 import { UserService } from 'src/app/services/users.service';
 
 @Component({
@@ -11,28 +11,38 @@ import { UserService } from 'src/app/services/users.service';
 export class UsersEditComponent implements OnInit {
   private _id: string | null;
   private _user: User; 
+  private _genders: Gender[];
 
   constructor(private router: Router, private route: ActivatedRoute, 
     private userService: UserService) {
       this._id = null;
       this._user = new User();
+      this._genders = Object.values(Gender);
+  }
+
+  get id() {
+    return this._id;
   }
 
   get user() {
     return this._user;
   }
 
+  get genders() {
+    return this._genders;
+  }
+
   addUser(user: User) {
     this.userService.addUser(user)
     .subscribe(() => {
-      this.router.navigate(["/users"])
+      this.router.navigate(["/users"]);
     })
   }
 
   updateUser(user: User) {
     this.userService.updateUser(user)
     .subscribe(() => {
-      this.router.navigate(["/users", this._user.id])
+      this.router.navigate(["/users", this._user.id]);
     })
   }
 
