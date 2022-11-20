@@ -9,13 +9,15 @@ import { UserService } from 'src/app/services/users.service';
   styleUrls: ['./users-detail.component.css']
 })
 export class UsersDetailComponent implements OnInit {
-  private _id: string | null = null;
+  private _id: string | null;
   private _user!: User;
 
   constructor(
     private route: ActivatedRoute, 
     private router: Router,
-    private userService: UserService) {}
+    private userService: UserService) {
+      this._id = null;
+    }
 
   get user(): User {
     return this._user;
@@ -31,7 +33,7 @@ export class UsersDetailComponent implements OnInit {
   deleteUser(user: User) {
     this.userService.deleteUser(user)
     .subscribe(() => {
-      this.router.navigate(["/users"])
+      this.router.navigate(["/users"]);
     })
   }
 
